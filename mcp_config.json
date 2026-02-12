@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "email": {
+      "command": "node",
+      "args": ["D:\\LEEZA\\HACKATHON 0\\silver\\email_mcp_server\\index.js"],
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}
