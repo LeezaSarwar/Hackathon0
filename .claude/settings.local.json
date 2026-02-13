@@ -17,7 +17,9 @@
       "Bash(git pull:*)",
       "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd demo preparation files and update dependencies\n\n- Created DEMO_VIDEO_PLAN.md with complete 10-minute script\n- Created DEMO_COMMANDS.txt with copy-paste commands\n- Created READY_TO_RECORD.md with final checklist\n- Updated requirements.txt with all dependencies\n- Verified file watcher working correctly\n\nSilver Tier Status: 8/8 requirements complete, 7/7 tests passed\nReady for demo video recording and submission\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
       "Bash(git add .claude/settings.local.json)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git checkout --ours README.md)",
+      "Bash(git add README.md)"
     ]
   }
 }
