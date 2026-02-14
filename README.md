@@ -1,4 +1,4 @@
-# AI Employee - Silver Tier
+# AI Employee - Brozen Tier
 
 A comprehensive AI-powered employee system that monitors Gmail, WhatsApp, and LinkedIn, with human-in-the-loop approval workflows and automated task management.
 
