@@ -4,7 +4,7 @@ A comprehensive AI-powered employee system that monitors Gmail, WhatsApp, and Li
 
 ## 🎯 Features
 
-### Silver Tier Capabilities
+### Brozen Tier Capabilities
 - ✅ Complete Obsidian vault structure with Dashboard and Handbook
 - ✅ Three watcher scripts (Gmail, WhatsApp, LinkedIn)
 - ✅ Automated LinkedIn posting for business growth
