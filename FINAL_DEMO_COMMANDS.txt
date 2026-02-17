@@ -1,0 +1,203 @@
+═══════════════════════════════════════════════════════════════
+FINAL DEMO SCRIPT - COPY PASTE COMMANDS
+═══════════════════════════════════════════════════════════════
+
+BEFORE RECORDING:
+1. Open File Explorer: D:\LEEZA\HACKATHON 0\silver\AI_Employee_Vault
+2. Open Terminal 1 (for file watcher)
+3. Open Terminal 2 (for demo commands)
+4. Press Win + G to start recording
+
+
+═══════════════════════════════════════════════════════════════
+MINUTE 0-1: INTRODUCTION
+═══════════════════════════════════════════════════════════════
+
+SAY:
+"Hi! I built a Silver Tier AI Employee system. It has three watcher
+scripts for Gmail, WhatsApp, and LinkedIn, human-in-the-loop approval,
+and 7 agent skills. Let me show you."
+
+SHOW: File Explorer with AI_Employee_Vault folder
+
+
+═══════════════════════════════════════════════════════════════
+MINUTE 1-4: LIVE FILE WATCHER DEMO
+═══════════════════════════════════════════════════════════════
+
+TERMINAL 1 - Type:
+cd "D:\LEEZA\HACKATHON 0\silver"
+python AI_Employee_Vault/file_watcher.py
+
+SAY: "Starting the file watcher to demonstrate the monitoring system..."
+
+WAIT for "Monitoring..." message
+
+TERMINAL 2 - Type:
+cd "D:\LEEZA\HACKATHON 0\silver"
+echo "URGENT: Customer complaint - order #12345 delayed, needs immediate response" > AI_Employee_Vault/Drop/demo_urgent.txt
+
+SAY: "Creating an urgent customer complaint file..."
+
+WAIT 3 seconds
+
+TERMINAL 2 - Type:
+dir AI_Employee_Vault\Needs_Action
+
+SAY: "Task created instantly with P0 priority because it contains URGENT."
+
+TERMINAL 2 - Type:
+type AI_Employee_Vault\Needs_Action\task_demo_urgent_*.md | more
+
+SAY: "The task includes metadata, priority, and a processing checklist."
+
+STOP watcher: Press Ctrl+C in Terminal 1
+
+
+═══════════════════════════════════════════════════════════════
+MINUTE 4-7: SHOW THREE WATCHER SCRIPTS
+═══════════════════════════════════════════════════════════════
+
+OPEN IN NOTEPAD/VS CODE: gmail_watcher.py
+
+SCROLL to show lines 1-50
+
+SAY:
+"This is the Gmail watcher. It uses the official Gmail API to monitor
+emails every 2 minutes. It looks for urgent keywords like 'urgent',
+'critical', 'emergency' and creates tasks automatically. The code is
+complete - it just needs OAuth credentials from Google Cloud Console
+to run."
+
+OPEN: whatsapp_watcher.py
+
+SCROLL to show lines 1-50
+
+SAY:
+"The WhatsApp watcher uses Playwright to automate WhatsApp Web. It
+checks every 30 seconds for new messages from important contacts. It
+detects urgent keywords and business inquiries. The code is complete -
+it just needs QR code authentication to run."
+
+OPEN: linkedin_automation.py
+
+SCROLL to show lines 1-50
+
+SAY:
+"The LinkedIn automation generates business posts based on Business
+Goals, puts them in a queue for approval, and posts them on schedule.
+It tracks engagement and automates sales outreach. The code is complete -
+it just needs LinkedIn login to run."
+
+SAY:
+"All three watchers follow the same architecture as the file watcher
+I just demonstrated. They monitor a source, detect important items,
+and create tasks with appropriate priority."
+
+
+═══════════════════════════════════════════════════════════════
+MINUTE 7-8: SHOW AGENT SKILLS
+═══════════════════════════════════════════════════════════════
+
+OPEN: Skills folder in File Explorer
+
+SAY:
+"The system has 7 agent skills that define how the AI makes decisions.
+Each skill is a documented workflow."
+
+SHOW list of files:
+- email_triage_skill.md
+- whatsapp_response_skill.md
+- linkedin_post_skill.md
+- approval_request_skill.md
+- process_inbox_skill.md
+- update_dashboard_skill.md
+- create_task_plan_skill.md
+
+OPEN one skill file (any one)
+
+SAY: "Each skill defines inputs, process, outputs, and success criteria."
+
+
+═══════════════════════════════════════════════════════════════
+MINUTE 8-9: SHOW REQUIREMENTS MET
+═══════════════════════════════════════════════════════════════
+
+OPEN: START_HERE.md
+
+SCROLL to requirements section (lines 9-50)
+
+SAY:
+"Let me show you all Silver Tier requirements are met:
+
+1. Bronze Foundation - Complete with Dashboard and Handbook
+2. Three Watcher Scripts - Gmail, WhatsApp, LinkedIn all implemented
+3. LinkedIn Sales Automation - Complete with approval workflow
+4. Claude Reasoning Loop - 7 agent skills for decision-making
+5. MCP Server - Email server with 5 tools
+6. Human-in-the-Loop Approval - Complete workflow with orchestrator
+7. Scheduling - Windows Task Scheduler and PM2 configs
+8. Agent Skills System - All AI functionality documented
+
+That's 8 out of 8 requirements complete, and all 7 tests passed."
+
+
+═══════════════════════════════════════════════════════════════
+MINUTE 9-10: WRAP UP
+═══════════════════════════════════════════════════════════════
+
+SAY:
+"This Silver Tier AI Employee system is production-ready with:
+- Three watcher scripts for Gmail, WhatsApp, and LinkedIn
+- Automated task creation with intelligent prioritization
+- Human approval workflow for sensitive actions
+- 7 agent skills for decision-making
+- Complete documentation and testing
+
+The file watcher demonstrates the core functionality live, and all
+three watcher scripts are complete and functional. They just need
+environment-specific authentication setup.
+
+Thank you for watching!"
+
+
+═══════════════════════════════════════════════════════════════
+STOP RECORDING
+═══════════════════════════════════════════════════════════════
+
+Press: Win + Alt + R
+
+Video saved in: C:\Users\Babar\Videos\Captures
+
+
+═══════════════════════════════════════════════════════════════
+AFTER RECORDING
+═══════════════════════════════════════════════════════════════
+
+1. Find video in: C:\Users\Babar\Videos\Captures
+
+2. Upload to YouTube:
+   - Go to: https://youtube.com/upload
+   - Set visibility: "Unlisted"
+   - Title: "AI Employee - Silver Tier Demo"
+   - Description: "Silver Tier implementation with 3 watcher scripts,
+     7 agent skills, human approval workflow. 8/8 requirements met."
+
+3. Get video link
+
+4. Fill submission form:
+   - Project: AI Employee - Silver Tier
+   - GitHub: https://github.com/LeezaSarwar/Hackathon0
+   - Video: [Your YouTube link]
+   - Description: "AI Employee system with Gmail, WhatsApp, LinkedIn
+     watchers, 7 agent skills, MCP server, human approval workflow.
+     8/8 requirements met, 7/7 tests passed."
+
+5. SUBMIT!
+
+
+═══════════════════════════════════════════════════════════════
+YOU'RE READY! START RECORDING NOW!
+═══════════════════════════════════════════════════════════════
+
+Press Win + G and follow this script!

@@ -19,7 +19,31 @@
       "Bash(git add .claude/settings.local.json)",
       "Bash(git commit:*)",
       "Bash(git checkout --ours README.md)",
-      "Bash(git add README.md)"
+      "Bash(git add README.md)",
+      "Bash(git push:*)",
+      "Bash(git remote:*)",
+      "Bash(ping:*)",
+      "Bash(timeout:*)",
+      "Bash(tasklist:*)",
+      "Bash(test:*)",
+      "Bash(echo:*)",
+      "Bash(powershell:*)",
+      "Bash(\"D:\\\\LEEZA\\\\HACKATHON 0\\\\silver\\\\SIMPLE_STEPS.txt\" << 'EOF'\n============================================================\nWhatsApp Watcher - SIMPLE STEPS\n============================================================\n\nSTEP 1: Start Watcher\n----------------------\nDouble-click this file:\n  START_WHATSAPP_FRESH.bat\n\nOR run this command:\n  python \"AI_Employee_Vault\\\\whatsapp_watcher.py\"\n\n\nSTEP 2: Scan QR Code \\(YOU HAVE 20 MINUTES!\\)\n--------------------------------------------\n1. Chrome browser will open automatically\n2. WhatsApp Web will load\n3. QR code will appear on screen\n4. Pick up your phone\n5. Open WhatsApp\n6. Tap 3 dots \\(⋮\\) at top right\n7. Tap \"Linked Devices\"\n8. Tap \"Link a Device\"\n9. Point camera at QR code on computer screen\n10. Wait for \"Device linked\" message on phone\n\n\nSTEP 3: Wait for Login Success\n-------------------------------\nTerminal will show:\n  \"✅ LOGIN SUCCESSFUL! WhatsApp Web is now connected!\"\n  \"WhatsApp Watcher is now monitoring messages...\"\n\nChrome will show your WhatsApp chats\n\n\nSTEP 4: Test It!\n----------------\nAsk your sister to send from her phone to your WhatsApp:\n  \"urgent need help\"\n\nWait 30 seconds \\(watcher checks every 30 sec\\)\n\n\nSTEP 5: Check Result\n--------------------\nLook in this folder:\n  AI_Employee_Vault\\\\Needs_Action\\\\\n\nYou'll see a new file:\n  whatsapp_[name]_[timestamp].md\n\nOpen it - it will have AI-generated draft reply!\n\n\n============================================================\nIMPORTANT NOTES\n============================================================\n\n✅ After login, watcher runs FOREVER \\(no timeout\\)\n✅ Browser stays open - don't close it\n✅ Draft reply is NOT sent automatically - you review and send\n✅ Press Ctrl+C in terminal to stop watcher\n\n❌ If you don't scan QR in 20 minutes, watcher will exit\n❌ If you close browser, watcher will stop\n\n============================================================\nWHAT HAPPENS AUTOMATICALLY\n============================================================\n\nWhen \"urgent need help\" message arrives:\n  1. Watcher detects it \\(within 30 seconds\\)\n  2. AI analyzes the message\n  3. AI generates personalized draft reply\n  4. Task file created in Needs_Action/\n  5. Terminal shows: \"Created task: whatsapp_...\"\n\nYou then:\n  1. Open the task file\n  2. Read the AI draft reply\n  3. Modify if needed\n  4. Copy and send via WhatsApp manually\n\n============================================================\nREADY TO START!\n============================================================\n\nCurrent Time: Check your clock\nQR Scan Timeout: 20 minutes\nAfter Login: Runs forever\n\nGO! Double-click START_WHATSAPP_FRESH.bat\nEOF)",
+      "Bash(date:*)",
+      "Bash(time:*)",
+      "Bash(cat:*)",
+      "Bash(explorer:*)",
+      "Bash(cmd.exe /c SETUP_GMAIL_OAUTH.bat)",
+      "Bash(playwright install:*)",
+      "Bash(playwright --version)",
+      "Bash(watch:*)",
+      "Bash(taskkill:*)",
+      "Bash(\"D:\\\\LEEZA\\\\HACKATHON 0\\\\silver\\\\AI_Employee_Vault\\\\Approved\\\\linkedin_post_approval_demo.md\":*)",
+      "Bash(\"D:/LEEZA/HACKATHON 0/silver/LINKEDIN_WORKFLOW_EXPLAINED.md\":*)",
+      "Bash(\"D:/LEEZA/HACKATHON 0/silver/DEMO_LINKEDIN_AUTOMATION.md\":*)",
+      "Bash(\"D:/LEEZA/HACKATHON 0/silver/QUICK_DEMO_STEPS.md\":*)",
+      "Bash(xargs:*)",
+      "Bash(\"D:/LEEZA/HACKATHON 0/silver/FINAL_LINKEDIN_GUIDE.md\":*)"
     ]
   }
 }

@@ -1,0 +1,265 @@
+[2026-02-17 00:40:33] LinkedIn Automation initialized
+[2026-02-17 00:40:33] ============================================================
+[2026-02-17 00:40:33] LinkedIn Automation Started
+[2026-02-17 00:40:33] Check interval: 300 seconds
+[2026-02-17 00:40:33] ============================================================
+[2026-02-17 00:40:35] Browser initialized successfully
+[2026-02-17 00:40:35] Navigating to LinkedIn...
+[2026-02-17 00:40:41] Already logged in to LinkedIn (detected: div.feed-shared-update-v2)
+[2026-02-17 00:40:41] Entering monitoring loop...
+[2026-02-17 00:40:41] Starting check cycle #1
+[2026-02-17 00:40:41] Checking for approved posts...
+[2026-02-17 00:40:41] Attempting to post to LinkedIn...
+[2026-02-17 00:40:41] Trying selector: button.share-box-feed-entry__trigger
+[2026-02-17 00:40:44] Trying selector: button[aria-label*="Start a post"]
+[2026-02-17 00:40:47] Trying selector: button[class*="share-box"]
+[2026-02-17 00:40:47] Found start post button with selector: button[class*="share-box"]
+[2026-02-17 00:40:48] Clicked 'Start a post' button
+[2026-02-17 00:40:53] Trying editor selector: div[role="textbox"]
+[2026-02-17 00:40:58] Editor selector div[role="textbox"] failed: Page.wait_for_selector: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"textb
+[2026-02-17 00:40:58] Trying editor selector: div.ql-editor
+[2026-02-17 00:41:03] Editor selector div.ql-editor failed: Page.wait_for_selector: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("div.ql-editor")
+[2026-02-17 00:41:03] Trying editor selector: div[contenteditable="true"]
+[2026-02-17 00:41:08] Editor selector div[contenteditable="true"] failed: Page.wait_for_selector: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("div[contentedita
+[2026-02-17 00:41:08] Trying editor selector: div[data-placeholder*="share"]
+[2026-02-17 00:41:13] Editor selector div[data-placeholder*="share"] failed: Page.wait_for_selector: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("div[data-placeho
+[2026-02-17 00:41:13] Trying editor selector: div.ql-editor[contenteditable="true"]
+[2026-02-17 00:41:18] Editor selector div.ql-editor[contenteditable="true"] failed: Page.wait_for_selector: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("div.ql-editor[co
+[2026-02-17 00:41:18] Trying editor selector: div[aria-label*="editor"]
+[2026-02-17 00:41:23] Editor selector div[aria-label*="editor"] failed: Page.wait_for_selector: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("div[aria-label*=
+[2026-02-17 00:41:23] Could not find post editor with any selector
+[2026-02-17 00:41:23] Checking what elements are visible in the modal...
+[2026-02-17 00:41:23] Found 0 contenteditable divs
+[2026-02-17 00:41:23] Failed to post: linkedin_post_approval_demo.md
+[2026-02-17 00:41:23] No approved posts found
+[2026-02-17 00:41:23] Sleeping for 300 seconds until next check...
+[2026-02-17 00:46:23] Starting check cycle #2
+[2026-02-17 00:46:23] Checking for approved posts...
+[2026-02-17 00:46:23] Attempting to post to LinkedIn...
+[2026-02-17 00:46:23] Trying selector: button.share-box-feed-entry__trigger
+[2026-02-17 00:46:26] Trying selector: button[aria-label*="Start a post"]
+[2026-02-17 00:46:29] Trying selector: button[class*="share-box"]
+[2026-02-17 00:46:29] Found start post button with selector: button[class*="share-box"]
+[2026-02-17 00:46:59] Error processing approved post linkedin_post_approval_demo.md: 'charmap' codec can't encode character '\u21b5' in position 398: character maps to <undefined>
+[2026-02-17 00:46:59] No approved posts found
+[2026-02-17 00:46:59] Sleeping for 300 seconds until next check...
+[2026-02-17 00:51:59] Starting check cycle #3
+[2026-02-17 00:51:59] Checking for approved posts...
+[2026-02-17 00:51:59] Attempting to post to LinkedIn...
+[2026-02-17 00:51:59] Trying selector: button.share-box-feed-entry__trigger
+[2026-02-17 00:52:02] Trying selector: button[aria-label*="Start a post"]
+[2026-02-17 00:52:05] Trying selector: button[class*="share-box"]
+[2026-02-17 00:52:05] Found start post button with selector: button[class*="share-box"]
+[2026-02-17 00:52:35] Error processing approved post linkedin_post_approval_demo.md: 'charmap' codec can't encode character '\u21b5' in position 887: character maps to <undefined>
+[2026-02-17 00:52:35] No approved posts found
+[2026-02-17 00:52:35] Sleeping for 300 seconds until next check...
+[2026-02-17 00:57:35] Starting check cycle #4
+[2026-02-17 00:57:35] Checking for approved posts...
+[2026-02-17 00:57:35] Attempting to post to LinkedIn...
+[2026-02-17 00:57:35] Trying selector: button.share-box-feed-entry__trigger
+[2026-02-17 00:57:38] Trying selector: button[aria-label*="Start a post"]
+[2026-02-17 00:57:41] Trying selector: button[class*="share-box"]
+[2026-02-17 00:57:41] Found start post button with selector: button[class*="share-box"]
+[2026-02-17 00:58:11] Error processing approved post linkedin_post_approval_demo.md: 'charmap' codec can't encode character '\u21b5' in position 887: character maps to <undefined>
+[2026-02-17 00:58:11] No approved posts found
+[2026-02-17 00:58:11] Sleeping for 300 seconds until next check...
+[2026-02-17 01:03:11] Starting check cycle #5
+[2026-02-17 01:03:11] Checking for approved posts...
+[2026-02-17 01:03:11] Attempting to post to LinkedIn...
+[2026-02-17 01:03:11] Trying selector: button.share-box-feed-entry__trigger
+[2026-02-17 01:03:14] Trying selector: button[aria-label*="Start a post"]
+[2026-02-17 01:03:17] Trying selector: button[class*="share-box"]
+[2026-02-17 01:03:17] Found start post button with selector: button[class*="share-box"]
+[2026-02-17 01:03:47] Error processing approved post linkedin_post_approval_demo.md: 'charmap' codec can't encode character '\u21b5' in position 398: character maps to <undefined>
+[2026-02-17 01:03:47] No approved posts found
+[2026-02-17 01:03:47] Monitoring engagement...
+[2026-02-17 01:03:47] Checking post engagement...
+[2026-02-17 01:03:59] Sleeping for 300 seconds until next check...
+[2026-02-17 01:08:59] Starting check cycle #6
+[2026-02-17 01:08:59] Checking for approved posts...
+[2026-02-17 01:08:59] Attempting to post to LinkedIn...
+[2026-02-17 01:08:59] Navigating to LinkedIn feed...
+[2026-02-17 01:09:29] Error posting to LinkedIn: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.linkedin.com/feed/", waiting until "networkidle"
+[2026-02-17 01:09:29] Traceback: Traceback (most recent call last):
+  File "D:\LEEZA\HACKATHON 0\silver\AI_Employee_Vault\linkedin_automation.py", line 299, in post_to_linkedin
+    self.page.goto('https://www.linkedin.com/feed/', wait_until='networkidle')
+  File "C:\Users\Babar\AppData\Local\Programs\Python\Python312\Lib\site-packages\playwright\sync_api\_generated.py", line 9054, in goto
+    self._sync(
+  File "C:\Users\Babar\AppData\Local\Programs\Python\Python312\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "C:\Users\Babar\AppData\Local\Programs\Python\Python312\Lib\site-packages\playwright\_impl\_page.py", line 552, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Babar\AppData\Local\Programs\Python\Python312\Lib\site-packages\playwright\_impl\_frame.py", line 153, in goto
+    await self._channel.send(
+  File "C:\Users\Babar\AppData\Local\Programs\Python\Python312\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Babar\AppData\Local\Programs\Python\Python312\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.linkedin.com/feed/", waiting until "networkidle"
+[2026-02-17 01:09:29] Failed to post: linkedin_post_approval_demo.md
+[2026-02-17 01:09:29] No approved posts found
+[2026-02-17 01:09:29] Sleeping for 300 seconds until next check...
+[2026-02-17 01:18:56] Starting check cycle #7
+[2026-02-17 01:18:56] Checking for approved posts...
+[2026-02-17 01:18:56] Attempting to post to LinkedIn...
+[2026-02-17 01:18:56] Trying selector: button.share-box-feed-entry__trigger
+[2026-02-17 01:18:59] Trying selector: button[aria-label*="Start a post"]
+[2026-02-17 01:19:02] Trying selector: button[class*="share-box"]
+[2026-02-17 01:19:02] Found start post button with selector: button[class*="share-box"]
+[2026-02-17 01:19:03] Clicked 'Start a post' button
+[2026-02-17 01:19:08] Trying editor selector: div[role="textbox"]
+[2026-02-17 01:19:13] Editor selector div[role="textbox"] failed: Page.wait_for_selector: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"textb
+[2026-02-17 01:19:13] Trying editor selector: div.ql-editor
+[2026-02-17 01:19:18] Editor selector div.ql-editor failed: Page.wait_for_selector: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("div.ql-editor")
+[2026-02-17 01:19:18] Trying editor selector: div[contenteditable="true"]
+[2026-02-17 01:19:23] Editor selector div[contenteditable="true"] failed: Page.wait_for_selector: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("div[contentedita
+[2026-02-17 01:19:23] Trying editor selector: div[data-placeholder*="share"]
+[2026-02-17 01:19:28] Editor selector div[data-placeholder*="share"] failed: Page.wait_for_selector: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("div[data-placeho
+[2026-02-17 01:19:28] Trying editor selector: div.ql-editor[contenteditable="true"]
+[2026-02-17 01:19:33] Editor selector div.ql-editor[contenteditable="true"] failed: Page.wait_for_selector: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("div.ql-editor[co
+[2026-02-17 01:19:33] Trying editor selector: div[aria-label*="editor"]
+[2026-02-17 01:19:38] Editor selector div[aria-label*="editor"] failed: Page.wait_for_selector: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("div[aria-label*=
+[2026-02-17 01:19:38] Could not find post editor with any selector
+[2026-02-17 01:19:38] Checking what elements are visible in the modal...
+[2026-02-17 01:19:38] Found 0 contenteditable divs
+[2026-02-17 01:19:38] Failed to post: linkedin_post_approval_demo.md
+[2026-02-17 01:19:38] No approved posts found
+[2026-02-17 01:19:38] Sleeping for 300 seconds until next check...
+[2026-02-17 01:24:38] Starting check cycle #8
+[2026-02-17 01:24:38] Checking for approved posts...
+[2026-02-17 01:24:38] Attempting to post to LinkedIn...
+[2026-02-17 01:24:38] Trying selector: button.share-box-feed-entry__trigger
+[2026-02-17 01:24:41] Trying selector: button[aria-label*="Start a post"]
+[2026-02-17 01:24:44] Trying selector: button[class*="share-box"]
+[2026-02-17 01:24:44] Found start post button with selector: button[class*="share-box"]
+[2026-02-17 01:25:14] Error posting to LinkedIn: ElementHandle.click: Timeout 30000ms exceeded.
+Call log:
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+      - waiting 100ms
+    55 × waiting for element to be visible, enabled and stable
+       - element is not enabled
+     - retrying click action
+       - waiting 500ms
+[2026-02-17 01:25:14] Traceback: Traceback (most recent call last):
+  File "D:\LEEZA\HACKATHON 0\silver\AI_Employee_Vault\linkedin_automation.py", line 336, in post_to_linkedin
+    start_post_button.click()
+  File "C:\Users\Babar\AppData\Local\Programs\Python\Python312\Lib\site-packages\playwright\sync_api\_generated.py", line 2167, in click
+    self._sync(
+  File "C:\Users\Babar\AppData\Local\Programs\Python\Python312\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "C:\Users\Babar\AppData\Local\Programs\Python\Python312\Lib\site-packages\playwright\_impl\_element_handle.py", line 143, in click
+    await self._channel.send(
+  File "C:\Users\Babar\AppData\Local\Programs\Python\Python312\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Babar\AppData\Local\Programs\Python\Python312\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: ElementHandle.click: Timeout 30000ms exceeded.
+Call log:
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+      - waiting 100ms
+    55 × waiting for element to be visible, enabled and stable
+       - element is not enabled
+     - retrying click action
+       - waiting 500ms
+[2026-02-17 01:25:14] Failed to post: linkedin_post_approval_demo.md
+[2026-02-17 01:25:14] No approved posts found
+[2026-02-17 01:25:14] Sleeping for 300 seconds until next check...
+[2026-02-17 01:30:14] Starting check cycle #9
+[2026-02-17 01:30:14] Checking for approved posts...
+[2026-02-17 01:30:14] Attempting to post to LinkedIn...
+[2026-02-17 01:30:14] Trying selector: button.share-box-feed-entry__trigger
+[2026-02-17 01:30:17] Trying selector: button[aria-label*="Start a post"]
+[2026-02-17 01:30:20] Trying selector: button[class*="share-box"]
+[2026-02-17 01:30:20] Found start post button with selector: button[class*="share-box"]
+[2026-02-17 01:30:50] Error posting to LinkedIn: ElementHandle.click: Timeout 30000ms exceeded.
+Call log:
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+      - waiting 100ms
+    54 × waiting for element to be visible, enabled and stable
+       - element is not enabled
+     - retrying click action
+       - waiting 500ms
+[2026-02-17 01:30:50] Traceback: Traceback (most recent call last):
+  File "D:\LEEZA\HACKATHON 0\silver\AI_Employee_Vault\linkedin_automation.py", line 336, in post_to_linkedin
+    start_post_button.click()
+  File "C:\Users\Babar\AppData\Local\Programs\Python\Python312\Lib\site-packages\playwright\sync_api\_generated.py", line 2167, in click
+    self._sync(
+  File "C:\Users\Babar\AppData\Local\Programs\Python\Python312\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "C:\Users\Babar\AppData\Local\Programs\Python\Python312\Lib\site-packages\playwright\_impl\_element_handle.py", line 143, in click
+    await self._channel.send(
+  File "C:\Users\Babar\AppData\Local\Programs\Python\Python312\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Babar\AppData\Local\Programs\Python\Python312\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: ElementHandle.click: Timeout 30000ms exceeded.
+Call log:
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+      - waiting 100ms
+    54 × waiting for element to be visible, enabled and stable
+       - element is not enabled
+     - retrying click action
+       - waiting 500ms

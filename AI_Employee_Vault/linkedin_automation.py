@@ -76,11 +76,15 @@ class LinkedInAutomation:
         try:
             playwright = sync_playwright().start()
 
-            # Launch browser with persistent context
+            # Launch Chromium browser with persistent context (more stable than Edge)
             self.context = playwright.chromium.launch_persistent_context(
                 user_data_dir=str(self.session_dir),
                 headless=False,  # Set to True for production
-                args=['--no-sandbox', '--disable-setuid-sandbox']
+                args=[
+                    '--no-sandbox',
+                    '--disable-setuid-sandbox',
+                    '--disable-blink-features=AutomationControlled'
+                ]
             )
 
             self.page = self.context.new_page()
@@ -95,21 +99,45 @@ class LinkedInAutomation:
         """Navigate to LinkedIn and handle login"""
         try:
             self.log("Navigating to LinkedIn...")
-            self.page.goto('https://www.linkedin.com/feed/', wait_until='networkidle')
+            self.page.goto('https://www.linkedin.com/feed/', wait_until='domcontentloaded', timeout=60000)
 
-            # Check if already logged in
+            # Check if already logged in - try multiple selectors
             try:
-                self.page.wait_for_selector('div[data-test-id="feed-container"]', timeout=5000)
-                self.log("Already logged in to LinkedIn")
-                return True
+                # Try multiple common LinkedIn feed elements
+                selectors = [
+                    'button.share-box-feed-entry__trigger',  # Start a post button
+                    'div.feed-shared-update-v2',  # Feed posts
+                    'nav.global-nav',  # Top navigation
+                    'button[aria-label*="Start a post"]',  # Start post button (alternative)
+                    'div.scaffold-finite-scroll__content'  # Feed content container
+                ]
+
+                for selector in selectors:
+                    try:
+                        self.page.wait_for_selector(selector, timeout=3000)
+                        self.log(f"Already logged in to LinkedIn (detected: {selector})")
+                        return True
+                    except:
+                        continue
+
+                # If none found, need to login
+                raise Exception("Not logged in")
+
             except:
                 self.log("Please login to LinkedIn manually...")
-                self.log("Waiting for login (60 seconds)...")
+                self.log("Waiting for login (120 seconds)...")
 
-                # Wait for login
-                self.page.wait_for_selector('div[data-test-id="feed-container"]', timeout=60000)
-                self.log("Login successful!")
-                return True
+                # Wait for login - try multiple selectors
+                for selector in selectors:
+                    try:
+                        self.page.wait_for_selector(selector, timeout=120000)
+                        self.log("Login successful!")
+                        return True
+                    except:
+                        continue
+
+                self.log("Login timeout - could not detect LinkedIn feed")
+                return False
 
         except Exception as e:
             self.log(f"Error during LinkedIn login: {e}")
@@ -267,48 +295,124 @@ To **MODIFY** this post:
 
             # Navigate to feed if not already there
             if 'linkedin.com/feed' not in self.page.url:
-                self.page.goto('https://www.linkedin.com/feed/')
-                time.sleep(2)
+                self.log("Navigating to LinkedIn feed...")
+                self.page.goto('https://www.linkedin.com/feed/', wait_until='networkidle')
+                time.sleep(5)
 
-            # Click "Start a post" button
-            start_post_button = self.page.query_selector('button[aria-label*="Start a post"]')
+            # Try multiple selectors for "Start a post" button
+            start_post_selectors = [
+                'button.share-box-feed-entry__trigger',
+                'button[aria-label*="Start a post"]',
+                'button[class*="share-box"]',
+                'div.share-box-feed-entry__trigger',
+                '.artdeco-button.share-box-feed-entry__trigger'
+            ]
+
+            start_post_button = None
+            for selector in start_post_selectors:
+                try:
+                    self.log(f"Trying selector: {selector}")
+                    start_post_button = self.page.wait_for_selector(selector, timeout=3000)
+                    if start_post_button:
+                        self.log(f"Found start post button with selector: {selector}")
+                        break
+                except:
+                    continue
+
             if not start_post_button:
-                start_post_button = self.page.query_selector('button.share-box-feed-entry__trigger')
-
-            if start_post_button:
-                start_post_button.click()
-                time.sleep(1)
-            else:
-                self.log("Could not find 'Start a post' button")
+                self.log("Could not find 'Start a post' button with any selector")
+                self.log("Available buttons on page:")
+                buttons = self.page.query_selector_all('button')
+                for i, btn in enumerate(buttons[:10]):  # Log first 10 buttons
+                    try:
+                        aria_label = btn.get_attribute('aria-label')
+                        class_name = btn.get_attribute('class')
+                        self.log(f"  Button {i}: aria-label='{aria_label}', class='{class_name}'")
+                    except:
+                        pass
                 return False
 
-            # Find the text editor
-            editor = self.page.query_selector('div[role="textbox"]')
+            # Click the button
+            start_post_button.click()
+            self.log("Clicked 'Start a post' button")
+            time.sleep(5)  # Increased wait time for modal to fully load
+
+            # Find the text editor with multiple selectors
+            editor_selectors = [
+                'div[role="textbox"]',
+                'div.ql-editor',
+                'div[contenteditable="true"]',
+                'div[data-placeholder*="share"]',
+                'div.ql-editor[contenteditable="true"]',
+                'div[aria-label*="editor"]'
+            ]
+
+            editor = None
+            for selector in editor_selectors:
+                try:
+                    self.log(f"Trying editor selector: {selector}")
+                    editor = self.page.wait_for_selector(selector, timeout=5000)
+                    if editor:
+                        self.log(f"Found editor with selector: {selector}")
+                        break
+                except Exception as e:
+                    self.log(f"Editor selector {selector} failed: {str(e)[:100]}")
+                    continue
+
             if not editor:
-                self.log("Could not find post editor")
+                self.log("Could not find post editor with any selector")
+                self.log("Checking what elements are visible in the modal...")
+                # Log available elements for debugging
+                try:
+                    divs = self.page.query_selector_all('div[contenteditable]')
+                    self.log(f"Found {len(divs)} contenteditable divs")
+                    for i, div in enumerate(divs[:3]):
+                        classes = div.get_attribute('class')
+                        role = div.get_attribute('role')
+                        self.log(f"  Div {i}: class='{classes}', role='{role}'")
+                except Exception as e:
+                    self.log(f"Error checking elements: {e}")
                 return False
 
             # Type the content
             editor.click()
-            editor.fill(content)
             time.sleep(1)
+            editor.fill(content)
+            self.log("Content entered into editor")
+            time.sleep(3)
 
-            # Click Post button
-            post_button = self.page.query_selector('button[aria-label*="Post"]')
+            # Click Post button with multiple selectors
+            post_button_selectors = [
+                'button[aria-label*="Post"]',
+                'button.share-actions__primary-action',
+                'button[data-test-modal-close-btn]',
+                'button[type="submit"]'
+            ]
+
+            post_button = None
+            for selector in post_button_selectors:
+                try:
+                    post_button = self.page.wait_for_selector(selector, timeout=3000)
+                    if post_button and 'post' in post_button.inner_text().lower():
+                        self.log(f"Found post button with selector: {selector}")
+                        break
+                except:
+                    continue
+
             if not post_button:
-                post_button = self.page.query_selector('button.share-actions__primary-action')
-
-            if post_button:
-                post_button.click()
-                time.sleep(3)
-                self.log("Post published successfully!")
-                return True
-            else:
                 self.log("Could not find Post button")
                 return False
 
+            post_button.click()
+            self.log("Clicked Post button")
+            time.sleep(5)
+            self.log("Post published successfully!")
+            return True
+
         except Exception as e:
             self.log(f"Error posting to LinkedIn: {e}")
+            import traceback
+            self.log(f"Traceback: {traceback.format_exc()}")
             return False
 
     def check_approved_posts(self):
@@ -369,7 +473,7 @@ To **MODIFY** this post:
 
             # Navigate to profile posts
             self.page.goto('https://www.linkedin.com/in/me/recent-activity/all/')
-            time.sleep(2)
+            time.sleep(5)
 
             # Get recent posts
             posts = self.page.query_selector_all('div[data-id]')[:5]  # Last 5 posts
@@ -421,16 +525,33 @@ To **MODIFY** this post:
             return
 
         try:
+            self.log("Entering monitoring loop...")
+            cycle_count = 0
+
             while True:
+                cycle_count += 1
+                self.log(f"Starting check cycle #{cycle_count}")
+
                 # Check for approved posts
-                posted = self.check_approved_posts()
-                if posted > 0:
-                    self.log(f"Posted {posted} approved post(s)")
+                try:
+                    self.log("Checking for approved posts...")
+                    posted = self.check_approved_posts()
+                    if posted > 0:
+                        self.log(f"Posted {posted} approved post(s)")
+                    else:
+                        self.log("No approved posts found")
+                except Exception as e:
+                    self.log(f"Error checking approved posts: {e}")
 
                 # Monitor engagement every 5 cycles
-                if int(time.time()) % (check_interval * 5) == 0:
-                    self.monitor_engagement()
+                if cycle_count % 5 == 0:
+                    try:
+                        self.log("Monitoring engagement...")
+                        self.monitor_engagement()
+                    except Exception as e:
+                        self.log(f"Error monitoring engagement: {e}")
 
+                self.log(f"Sleeping for {check_interval} seconds until next check...")
                 time.sleep(check_interval)
 
         except KeyboardInterrupt:

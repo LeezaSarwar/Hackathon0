@@ -1,0 +1,93 @@
+============================================================
+WhatsApp Watcher - SIMPLE STEPS
+============================================================
+
+STEP 1: Start Watcher
+----------------------
+Double-click this file:
+  START_WHATSAPP_FRESH.bat
+
+OR run this command:
+  python "AI_Employee_Vault\whatsapp_watcher.py"
+
+
+STEP 2: Scan QR Code (YOU HAVE 20 MINUTES!)
+--------------------------------------------
+1. Chrome browser will open automatically
+2. WhatsApp Web will load
+3. QR code will appear on screen
+4. Pick up your phone
+5. Open WhatsApp
+6. Tap 3 dots (⋮) at top right
+7. Tap "Linked Devices"
+8. Tap "Link a Device"
+9. Point camera at QR code on computer screen
+10. Wait for "Device linked" message on phone
+
+
+STEP 3: Wait for Login Success
+-------------------------------
+Terminal will show:
+  "✅ LOGIN SUCCESSFUL! WhatsApp Web is now connected!"
+  "WhatsApp Watcher is now monitoring messages..."
+
+Chrome will show your WhatsApp chats
+
+
+STEP 4: Test It!
+----------------
+Ask your sister to send from her phone to your WhatsApp:
+  "urgent need help"
+
+Wait 30 seconds (watcher checks every 30 sec)
+
+
+STEP 5: Check Result
+--------------------
+Look in this folder:
+  AI_Employee_Vault\Needs_Action\
+
+You'll see a new file:
+  whatsapp_[name]_[timestamp].md
+
+Open it - it will have AI-generated draft reply!
+
+
+============================================================
+IMPORTANT NOTES
+============================================================
+
+✅ After login, watcher runs FOREVER (no timeout)
+✅ Browser stays open - don't close it
+✅ Draft reply is NOT sent automatically - you review and send
+✅ Press Ctrl+C in terminal to stop watcher
+
+❌ If you don't scan QR in 20 minutes, watcher will exit
+❌ If you close browser, watcher will stop
+
+============================================================
+WHAT HAPPENS AUTOMATICALLY
+============================================================
+
+When "urgent need help" message arrives:
+  1. Watcher detects it (within 30 seconds)
+  2. AI analyzes the message
+  3. AI generates personalized draft reply
+  4. Task file created in Needs_Action/
+  5. Terminal shows: "Created task: whatsapp_..."
+
+You then:
+  1. Open the task file
+  2. Read the AI draft reply
+  3. Modify if needed
+  4. Copy and send via WhatsApp manually
+
+============================================================
+READY TO START!
+============================================================
+
+Current Time: Check your clock
+QR Scan Timeout: 20 minutes
+After Login: Runs forever
+
+GO! Double-click START_WHATSAPP_FRESH.bat

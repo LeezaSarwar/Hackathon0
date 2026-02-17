@@ -1,0 +1,67 @@
+═══════════════════════════════════════════════════════════════
+ULTRA SIMPLE DEMO GUIDE - FOLLOW THIS EXACTLY
+═══════════════════════════════════════════════════════════════
+
+□ STEP 1: Open File Explorer
+  Navigate to: D:\LEEZA\HACKATHON 0\silver\AI_Employee_Vault
+
+□ STEP 2: Open 2 PowerShell windows
+  (Win + R, type "powershell", Enter) - do this twice
+
+□ STEP 3: Start recording
+  Press: Win + G
+  Click: Red record button
+
+□ STEP 4: Say intro (30 seconds)
+  "Hi! I built a Silver Tier AI Employee with Gmail, WhatsApp,
+  LinkedIn watchers, 7 agent skills, and human approval. Let me
+  show you."
+
+□ STEP 5: Run file watcher (3 minutes)
+  Terminal 1:
+    cd "D:\LEEZA\HACKATHON 0\silver"
+    python AI_Employee_Vault/file_watcher.py
+
+  Terminal 2:
+    cd "D:\LEEZA\HACKATHON 0\silver"
+    echo "URGENT: Customer complaint - order #12345 delayed" > AI_Employee_Vault/Drop/demo_urgent.txt
+    dir AI_Employee_Vault\Needs_Action
+
+  Say: "Task created with P0 priority!"
+  Stop watcher: Ctrl+C
+
+□ STEP 6: Show 3 watcher code files (3 minutes)
+  Open in Notepad:
+  - gmail_watcher.py - "Gmail API, monitors every 2 min"
+  - whatsapp_watcher.py - "Playwright, checks every 30 sec"
+  - linkedin_automation.py - "Generates posts with approval"
+
+□ STEP 7: Show Skills folder (1 minute)
+  Open: AI_Employee_Vault\Skills
+  Say: "7 agent skills for decision-making"
+
+□ STEP 8: Show requirements (2 minutes)
+  Open: START_HERE.md
+  Say: "8 out of 8 requirements complete!"
+
+□ STEP 9: Say thank you (30 seconds)
+  "This Silver Tier system is production-ready. Thank you!"
+
+□ STEP 10: Stop recording
+  Press: Win + Alt + R
+  Video saved in: C:\Users\Babar\Videos\Captures
+
+□ STEP 11: Upload to YouTube
+  Go to: https://youtube.com/upload
+  Set: Unlisted
+  Title: "AI Employee - Silver Tier Demo"
+
+□ STEP 12: Submit
+  GitHub: https://github.com/LeezaSarwar/Hackathon0
+  Video: [Your YouTube link]
+
+═══════════════════════════════════════════════════════════════
+TOTAL TIME: 30 MINUTES TO SUBMISSION
+═══════════════════════════════════════════════════════════════
+
+You've got this! Start now! 🚀

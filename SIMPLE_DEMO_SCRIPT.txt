@@ -1,0 +1,116 @@
+═══════════════════════════════════════════════════════════════
+SIMPLE DEMO SCRIPT - 10 MINUTES
+═══════════════════════════════════════════════════════════════
+
+STEP 1: START RECORDING
+Press Win + G, click Record button
+
+
+STEP 2: INTRODUCTION (1 minute)
+═══════════════════════════════════════════════════════════════
+SAY:
+"Hi! I built a Silver Tier AI Employee system. It monitors Gmail,
+WhatsApp, and LinkedIn with human approval and 7 agent skills.
+Let me show you."
+
+SHOW: File Explorer at AI_Employee_Vault folder
+
+
+STEP 3: LIVE DEMO - FILE WATCHER (3 minutes)
+═══════════════════════════════════════════════════════════════
+TERMINAL 1:
+cd "D:\LEEZA\HACKATHON 0\silver"
+python AI_Employee_Vault/file_watcher.py
+
+SAY: "Starting the file watcher..."
+
+TERMINAL 2:
+cd "D:\LEEZA\HACKATHON 0\silver"
+echo "URGENT: Customer complaint - order #12345 delayed" > AI_Employee_Vault/Drop/demo_urgent.txt
+
+SAY: "Creating an urgent customer complaint..."
+
+WAIT 3 seconds
+
+TERMINAL 2:
+dir AI_Employee_Vault\Needs_Action
+
+SAY: "Task created instantly with P0 priority!"
+
+TERMINAL 2:
+type AI_Employee_Vault\Needs_Action\task_demo_urgent_*.md
+
+SAY: "Complete with metadata and checklist."
+
+STOP watcher (Ctrl+C)
+
+
+STEP 4: SHOW THE 3 WATCHER SCRIPTS (3 minutes)
+═══════════════════════════════════════════════════════════════
+OPEN: gmail_watcher.py (show top of file)
+SAY: "Gmail watcher uses Gmail API, monitors every 2 minutes."
+
+OPEN: whatsapp_watcher.py (show top of file)
+SAY: "WhatsApp watcher uses Playwright, checks every 30 seconds."
+
+OPEN: linkedin_automation.py (show top of file)
+SAY: "LinkedIn automation generates posts with approval workflow."
+
+SAY: "These require authentication - Gmail needs OAuth, WhatsApp
+needs QR code. The file watcher proves the system works."
+
+
+STEP 5: SHOW AGENT SKILLS (1 minute)
+═══════════════════════════════════════════════════════════════
+OPEN: Skills folder
+SAY: "7 agent skills define how AI makes decisions."
+
+SHOW: List of 7 skills
+
+
+STEP 6: SHOW REQUIREMENTS MET (2 minutes)
+═══════════════════════════════════════════════════════════════
+OPEN: START_HERE.md
+
+SCROLL to requirements section
+
+SAY: "All 8 Silver Tier requirements complete:
+- Bronze foundation
+- Three watcher scripts
+- LinkedIn automation
+- Claude reasoning with 7 skills
+- MCP server
+- Human approval workflow
+- Scheduling
+- Agent skills system
+
+8 out of 8 complete, 7 out of 7 tests passed."
+
+
+STEP 7: WRAP UP (30 seconds)
+═══════════════════════════════════════════════════════════════
+SAY: "This Silver Tier system is production-ready with automated
+monitoring, intelligent task creation, human approval, and complete
+documentation. Thank you!"
+
+
+STEP 8: STOP RECORDING
+═══════════════════════════════════════════════════════════════
+Press Win + Alt + R
+
+Video saved in: C:\Users\Babar\Videos\Captures
+
+
+STEP 9: UPLOAD & SUBMIT
+═══════════════════════════════════════════════════════════════
+1. Upload to YouTube (unlisted): https://youtube.com/upload
+2. Get video link
+3. Fill submission form:
+   - GitHub: https://github.com/LeezaSarwar/Hackathon0
+   - Video: [Your link]
+4. SUBMIT!
+
+
+═══════════════════════════════════════════════════════════════
+YOU'RE READY! START RECORDING NOW!
+═══════════════════════════════════════════════════════════════

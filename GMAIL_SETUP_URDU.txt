@@ -1,0 +1,53 @@
+Gmail Watcher Setup - آسان گائیڈ
+=====================================
+
+STEP 1: Google Cloud Console
+-----------------------------
+1. Is link par jao: https://console.cloud.google.com/apis/credentials
+2. "Create Credentials" button par click karo
+3. "OAuth client ID" select karo
+4. Application type: "Desktop app" choose karo
+5. Name likho (kuch bhi, jaise "Gmail Watcher")
+6. "Create" par click karo
+
+STEP 2: Credentials Download
+-----------------------------
+1. Download icon (⬇) par click karo
+2. JSON file download hogi (naam kuch aisa hoga: client_secret_xxxxx.json)
+
+STEP 3: File Ko Rename Aur Move Karo
+-------------------------------------
+1. Downloaded file ka naam change karo to: gmail_credentials.json
+2. Is file ko yahan copy karo:
+   D:\LEEZA\HACKATHON 0\silver\AI_Employee_Vault\gmail_credentials.json
+
+STEP 4: Watcher Chalao
+-----------------------
+1. Terminal mein ye command run karo:
+   python AI_Employee_Vault/gmail_watcher.py
+
+2. Browser automatically khulega
+3. Apne Google account se login karo
+4. "Allow" par click karo permissions dene ke liye
+5. Browser close kar sakte ho - watcher chal jayega!
+
+IMPORTANT NOTES:
+----------------
+- Pehli baar browser khulega authentication ke liye
+- Uske baad automatically chalega (token save ho jayega)
+- Watcher har 2 minutes mein emails check karega
+- Important emails ke liye automatically tasks banayega
+
+TROUBLESHOOTING:
+----------------
+- Agar "gmail_credentials.json not found" error aaye:
+  → File ka naam exactly "gmail_credentials.json" hona chahiye
+  → File AI_Employee_Vault folder mein honi chahiye
+
+- Agar browser nahi khule:
+  → Manually is link par jao jo terminal mein dikhega
+  → Login karke allow karo
+
+- Agar "API not enabled" error aaye:
+  → Google Cloud Console mein Gmail API enable karo
+  → https://console.cloud.google.com/apis/library/gmail.googleapis.com

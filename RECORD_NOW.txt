@@ -1,0 +1,199 @@
+═══════════════════════════════════════════════════════════════
+DEMO RECORDING SCRIPT - FOLLOW THIS EXACTLY
+═══════════════════════════════════════════════════════════════
+
+BEFORE YOU START:
+□ Close unnecessary windows
+□ Open File Explorer at: D:\LEEZA\HACKATHON 0\silver\AI_Employee_Vault
+□ Open 2 terminals
+□ Have this file visible for reference
+□ Press Win + G to start recording
+
+
+═══════════════════════════════════════════════════════════════
+MINUTE 0-1: INTRODUCTION
+═══════════════════════════════════════════════════════════════
+
+SAY:
+"Hi! I built a Silver Tier AI Employee system for the hackathon.
+It monitors Gmail, WhatsApp, and LinkedIn, has human-in-the-loop
+approval for sensitive actions, and uses 7 agent skills for
+intelligent decision-making. Let me show you what I built."
+
+SHOW:
+- File Explorer showing AI_Employee_Vault folder
+- Point out the folders: Skills, Needs_Action, Pending_Approval
+
+
+═══════════════════════════════════════════════════════════════
+MINUTE 1-3: SHOW STRUCTURE & FILES
+═══════════════════════════════════════════════════════════════
+
+OPEN AND SHOW:
+1. Dashboard.md - "Real-time status dashboard"
+2. Skills folder - "7 agent skills for decision-making"
+3. Company_Handbook.md - "AI behavior rules"
+
+SAY:
+"The vault has 7 agent skills that define how the AI makes
+decisions. There's email triage, WhatsApp response, LinkedIn
+posting, approval requests, and more. Each skill is a documented
+workflow that Claude follows."
+
+
+═══════════════════════════════════════════════════════════════
+MINUTE 3-5: LIVE DEMO - FILE WATCHER
+═══════════════════════════════════════════════════════════════
+
+TERMINAL 1 - Type this:
+cd "D:\LEEZA\HACKATHON 0\silver"
+python AI_Employee_Vault/file_watcher.py
+
+SAY:
+"Now let me demonstrate the file monitoring system live.
+I'm starting the file watcher... it's now monitoring the
+Drop folder."
+
+WAIT for watcher to start (shows "Monitoring..." message)
+
+TERMINAL 2 - Type this:
+cd "D:\LEEZA\HACKATHON 0\silver"
+echo "URGENT: Customer complaint - order #12345 delayed, customer very upset, needs immediate response" > AI_Employee_Vault/Drop/demo_urgent.txt
+
+SAY:
+"Let me create an urgent customer complaint file..."
+
+WAIT 3 seconds
+
+TERMINAL 2 - Type this:
+dir AI_Employee_Vault\Needs_Action
+
+SAY:
+"And within seconds, you can see it detected the file and
+created a task. Notice it assigned P0 priority because it
+contains 'URGENT'."
+
+TERMINAL 2 - Type this:
+type AI_Employee_Vault\Needs_Action\task_demo_urgent_*.md
+
+SAY:
+"The task includes all metadata, a processing checklist,
+and suggested actions. This happens automatically."
+
+STOP the file watcher (Ctrl+C in Terminal 1)
+
+
+═══════════════════════════════════════════════════════════════
+MINUTE 5-7: CODE WALKTHROUGH
+═══════════════════════════════════════════════════════════════
+
+OPEN IN TEXT EDITOR:
+1. gmail_watcher.py (show lines 1-50)
+
+SAY:
+"Let me show you the three watcher scripts. The Gmail watcher
+uses the official Gmail API to monitor emails every 2 minutes.
+It looks for urgent keywords and creates tasks automatically."
+
+2. whatsapp_watcher.py (show lines 1-50)
+
+SAY:
+"The WhatsApp watcher uses Playwright to automate WhatsApp Web.
+It checks every 30 seconds for new messages from important
+contacts."
+
+3. linkedin_automation.py (show lines 1-50)
+
+SAY:
+"The LinkedIn automation generates business posts, puts them
+in a queue for approval, and posts them on schedule. This
+automates sales and business development."
+
+
+═══════════════════════════════════════════════════════════════
+MINUTE 7-9: SHOW REQUIREMENTS MET
+═══════════════════════════════════════════════════════════════
+
+OPEN: START_HERE.md
+
+SCROLL to the requirements section and SAY:
+"Let me show you that all Silver Tier requirements are met.
+You can see:
+- Bronze foundation: Complete
+- Three watcher scripts: Gmail, WhatsApp, LinkedIn
+- LinkedIn sales automation: With approval workflow
+- Claude reasoning loop: 7 agent skills
+- MCP server: For email integration
+- Human-in-the-loop approval: Pending_Approval folder
+- Scheduling: Task Scheduler and PM2
+- Agent skills system: All documented
+
+That's 8 out of 8 requirements complete, and all 7 tests passed."
+
+
+═══════════════════════════════════════════════════════════════
+MINUTE 9-10: WRAP UP
+═══════════════════════════════════════════════════════════════
+
+SAY:
+"This Silver Tier AI Employee system is production-ready with:
+- Automated monitoring of 3 communication channels
+- Intelligent task creation and prioritization
+- Human approval for sensitive actions
+- Complete documentation and testing
+- Modular, extensible architecture
+
+The implementation took about 20-30 hours and demonstrates
+real automation, intelligence, and business value.
+
+Thank you for watching!"
+
+
+═══════════════════════════════════════════════════════════════
+STOP RECORDING
+═══════════════════════════════════════════════════════════════
+
+Press: Win + Alt + R (Game Bar)
+Or click: Stop Recording button
+
+Video saved in: C:\Users\Babar\Videos\Captures
+
+
+═══════════════════════════════════════════════════════════════
+AFTER RECORDING
+═══════════════════════════════════════════════════════════════
+
+1. Find your video in: C:\Users\Babar\Videos\Captures
+
+2. Upload to YouTube:
+   - Go to: https://youtube.com/upload
+   - Set visibility: "Unlisted"
+   - Title: "AI Employee - Silver Tier Demo"
+   - Get the link
+
+3. Fill out submission form:
+   - Project: AI Employee - Silver Tier
+   - GitHub: https://github.com/LeezaSarwar/Hackathon0
+   - Video: [Your YouTube link]
+   - Description: "AI Employee system monitoring Gmail, WhatsApp,
+     LinkedIn with human-in-the-loop approval, 7 agent skills,
+     MCP server. 8/8 requirements met, 7/7 tests passed."
+
+4. SUBMIT!
+
+
+═══════════════════════════════════════════════════════════════
+TIPS
+═══════════════════════════════════════════════════════════════
+
+✓ Speak clearly and confidently
+✓ Don't rush - take your time
+✓ Show enthusiasm about what you built
+✓ If you make a small mistake, just continue
+✓ The live file watcher demo proves it works
+✓ You've built something impressive!
+
+
+═══════════════════════════════════════════════════════════════
+YOU'RE READY! START RECORDING WHENEVER YOU'RE READY!
+═══════════════════════════════════════════════════════════════

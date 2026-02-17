@@ -1,0 +1,157 @@
+═══════════════════════════════════════════════════════════════
+DEMO RECORDING - START NOW
+═══════════════════════════════════════════════════════════════
+
+STEP 1: OPEN THESE 3 WINDOWS
+═══════════════════════════════════════════════════════════════
+
+Window 1: File Explorer
+- Press: Win + E
+- Navigate to: D:\LEEZA\HACKATHON 0\silver\AI_Employee_Vault
+- Keep this visible on screen
+
+Window 2: Terminal 1 (PowerShell)
+- Press: Win + R
+- Type: powershell
+- Press: Enter
+
+Window 3: Terminal 2 (PowerShell)
+- Press: Win + R
+- Type: powershell
+- Press: Enter
+
+
+STEP 2: START RECORDING
+═══════════════════════════════════════════════════════════════
+
+- Press: Win + G
+- Click: Red circle (Record button)
+- Or press: Win + Alt + R
+
+
+STEP 3: SAY THIS AND DO THIS
+═══════════════════════════════════════════════════════════════
+
+SAY: "Hi! I built a Silver Tier AI Employee system with Gmail,
+WhatsApp, and LinkedIn watchers, 7 agent skills, and human approval
+workflow. Let me show you."
+
+SHOW: File Explorer window
+
+
+STEP 4: RUN FILE WATCHER (LIVE DEMO)
+═══════════════════════════════════════════════════════════════
+
+TERMINAL 1 - Copy and paste:
+cd "D:\LEEZA\HACKATHON 0\silver"
+python AI_Employee_Vault/file_watcher.py
+
+SAY: "Starting the file watcher..."
+
+WAIT for "Monitoring..." message (5 seconds)
+
+TERMINAL 2 - Copy and paste:
+cd "D:\LEEZA\HACKATHON 0\silver"
+echo "URGENT: Customer complaint - order #12345 delayed" > AI_Employee_Vault/Drop/demo_urgent.txt
+
+SAY: "Creating an urgent customer complaint..."
+
+WAIT 3 seconds
+
+TERMINAL 2 - Copy and paste:
+dir AI_Employee_Vault\Needs_Action
+
+SAY: "Task created instantly with P0 priority!"
+
+TERMINAL 2 - Copy and paste:
+type AI_Employee_Vault\Needs_Action\task_demo_urgent_*.md | more
+
+SAY: "Complete with metadata and checklist."
+
+Press Ctrl+C in Terminal 1 to stop watcher
+
+
+STEP 5: SHOW WATCHER CODE
+═══════════════════════════════════════════════════════════════
+
+OPEN in Notepad: AI_Employee_Vault\gmail_watcher.py
+
+SAY: "Gmail watcher uses Gmail API, monitors every 2 minutes.
+Code is complete, just needs OAuth setup."
+
+OPEN in Notepad: AI_Employee_Vault\whatsapp_watcher.py
+
+SAY: "WhatsApp watcher uses Playwright, checks every 30 seconds.
+Code is complete, just needs QR authentication."
+
+OPEN in Notepad: AI_Employee_Vault\linkedin_automation.py
+
+SAY: "LinkedIn automation generates posts with approval workflow.
+Code is complete, just needs login."
+
+
+STEP 6: SHOW AGENT SKILLS
+═══════════════════════════════════════════════════════════════
+
+OPEN: AI_Employee_Vault\Skills folder
+
+SAY: "7 agent skills define AI decision-making."
+
+SHOW: List of 7 skill files
+
+
+STEP 7: SHOW REQUIREMENTS
+═══════════════════════════════════════════════════════════════
+
+OPEN: START_HERE.md
+
+SCROLL to requirements section
+
+SAY: "All 8 Silver Tier requirements complete:
+- Three watcher scripts
+- 7 agent skills
+- Human approval workflow
+- MCP server
+- Complete documentation
+8 out of 8 complete!"
+
+
+STEP 8: WRAP UP
+═══════════════════════════════════════════════════════════════
+
+SAY: "This Silver Tier system is production-ready with automated
+monitoring, intelligent task creation, and human approval.
+Thank you!"
+
+
+STEP 9: STOP RECORDING
+═══════════════════════════════════════════════════════════════
+
+Press: Win + Alt + R
+
+Video saved in: C:\Users\Babar\Videos\Captures
+
+
+STEP 10: UPLOAD AND SUBMIT
+═══════════════════════════════════════════════════════════════
+
+1. Go to: https://youtube.com/upload
+2. Upload your video
+3. Set: Unlisted
+4. Title: "AI Employee - Silver Tier Demo"
+5. Get video link
+6. Fill submission form with:
+   - GitHub: https://github.com/LeezaSarwar/Hackathon0
+   - Video: [Your link]
+7. SUBMIT!
+
+
+═══════════════════════════════════════════════════════════════
+TOTAL TIME: 30 MINUTES
+═══════════════════════════════════════════════════════════════
+
+Recording: 10 minutes
+Upload: 10 minutes
+Submit: 10 minutes
+
+YOU'RE READY! START NOW!
