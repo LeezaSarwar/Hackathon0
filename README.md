@@ -1,10 +1,10 @@
-# AI Employee - Silver Tier
+# AI Employee - Brozen Tier
 
 A comprehensive AI-powered employee system that monitors Gmail, WhatsApp, and LinkedIn, with human-in-the-loop approval workflows and automated task management.
 
 ## 🎯 Features
 
-### Silver Tier Capabilities
+### Brozen Tier Capabilities
 - ✅ Complete Obsidian vault structure with Dashboard and Handbook
 - ✅ Three watcher scripts (Gmail, WhatsApp, LinkedIn)
 - ✅ Automated LinkedIn posting for business growth
